@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --purple: hsl(276, 61%, 61%);
+    --backgorund: hsl(233, 46%, 7%);
+    --card-background: hsl(246, 38%, 16%);
+    --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgorund);
+    color: var(--white);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-background);
+    width: 1000px;
+    border-radius: 8px;
+}
+
+.card__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    width: 50%;
+    padding: 2rem;
+}
+
+.part1 {
+    margin: 1rem 2.5rem 1rem 1rem;
+}
+
+h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.heading__color {
+    color: var(--purple);
+}
+
+.card__left_text {
+    margin-top: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+.part2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 2.5rem 0 1rem;
+    padding-top: 1rem;
+}
+
+.list {
+    list-style: none;
+}
+
+.card__left_p2_text {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 12px;
+}
+
+.card__right {
+    flex: 1;
+    width: 50%;
+}
+
+.img__desktop {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 100%;
+    height: auto;
+}
+
+.img__mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+
+    .container{
+        padding: 2rem 1rem;
+        margin: 2rem;
+    }
+
+    .card {
+        flex-direction: column-reverse;
+        width: 90%;
+        height: auto;
+    }
+
+    .card__left {
+        flex: 1;
+        width: 100%;
+        padding: 0.5rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    .card__right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .img__desktop {
+        display: none;
+    }
+
+    .img__mobile {
+        display: block;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        width: 100%;
+        max-width: 1000px;
+        height: auto;
+    }
+
+    .part2 {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .list {
+        margin: 1rem 0;  
+    }
+}
